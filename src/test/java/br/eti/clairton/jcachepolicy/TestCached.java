@@ -9,7 +9,7 @@ import javax.enterprise.context.RequestScoped;
 @RequestScoped
 public class TestCached {
 
-	@CacheResult(cacheResolverFactory = MinutelyExpiryCacheResolverFactory.class)
+	@CacheResult(cacheResolverFactory = Minutely.class)
 	public String method() {
 		return new Date().toString() + new Random().nextLong();
 	}

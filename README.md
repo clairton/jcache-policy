@@ -5,7 +5,7 @@ Jcache Policy.
 @RequestScoped
 public class TestCached {
 
-	@CacheResult(cacheResolverFactory = MinutelyExpiryCacheResolverFactory.class)
+	@CacheResult(cacheResolverFactory = Minutely.class)
 	public String method() {
 		return new Date().toString() + new Random().nextLong();
 	}
@@ -16,10 +16,10 @@ Is possible use:
 
 Class|Time to expire
 ---  | ---
-MinutelyExpiryCacheResolverFactory|1 minute
-DailyExpiryCacheResolverFactory|1 day
-HourlyExpiryCacheResolverFactory|1 hour
-HalfAnHourExpiryCacheResolverFactory|30 minutes
+Minutely|1 minute
+Daily|1 day
+Hourly|1 hour
+HalfAnHour|30 minutes
 
 To use with maven, you need to add de repositories:
 

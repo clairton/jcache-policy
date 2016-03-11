@@ -7,11 +7,11 @@ import java.util.concurrent.TimeUnit;
 import javax.enterprise.context.ApplicationScoped;
 
 @ApplicationScoped
-public class HalfAnHourExpiryCacheResolverFactory extends AbstractExpiryCacheResolverFactory {
+public class HalfAnHour extends AbstractExpiryCacheResolverFactory {
 	
 	private static final AbstractExpiryCacheResolver resolver = new HalfAnHourExpiryCacheResolver();
 
-	public HalfAnHourExpiryCacheResolverFactory() {
+	public HalfAnHour() {
 		super(resolver);
 	}
 
