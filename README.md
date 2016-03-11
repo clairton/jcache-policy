@@ -13,11 +13,12 @@ public class TestCached {
 }
 ```
 Is possible use:
-|Class|Time to expire|
-|MinutelyExpiryCacheResolverFactory|1 minute|
-|DailyExpiryCacheResolverFactory|1 day|
-|HourlyExpiryCacheResolverFactory|1 hour|
-|HalsAnHourExpiryCacheResolverFactory|30 minutes|
+|Class|Time to expire
+--- | ---
+MinutelyExpiryCacheResolverFactory|1 minute
+DailyExpiryCacheResolverFactory|1 day
+HourlyExpiryCacheResolverFactory|1 hour
+HalsAnHourExpiryCacheResolverFactory|30 minutes
 
 To use with maven, you need to add de repositories:
 
