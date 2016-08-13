@@ -7,7 +7,7 @@ import javax.cache.annotation.CacheResolver;
 import javax.cache.annotation.CacheResolverFactory;
 import javax.cache.annotation.CacheResult;
 
-abstract class AbstractExpiryCacheResolverFactory implements CacheResolverFactory{
+public abstract class AbstractExpiryCacheResolverFactory implements CacheResolverFactory{
 	
 	private final AbstractExpiryCacheResolver resolver;
 

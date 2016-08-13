@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>br.eti.clairton</groupId>
 	<artifactId>jcache-policy</artifactId>
-	<version>0.1.0</version>
+	<version>0.2.0</version>
 
 	<properties>
 		<deltaspike.version>1.5.4</deltaspike.version>

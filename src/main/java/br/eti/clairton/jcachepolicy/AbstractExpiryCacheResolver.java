@@ -14,7 +14,7 @@ import javax.cache.configuration.MutableConfiguration;
 import javax.cache.expiry.Duration;
 import javax.cache.spi.CachingProvider;
 
-abstract class AbstractExpiryCacheResolver implements CacheResolver{
+public abstract class AbstractExpiryCacheResolver implements CacheResolver{
 
 	protected final CacheManager manager;
 
