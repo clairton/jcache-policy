@@ -11,7 +11,8 @@ import org.junit.runner.RunWith;
 @RunWith(CdiTestRunner.class)
 public class CacheResolverFactoryTest {	
 	
-	private @Inject TestCached test;
+    @Inject 
+	private TestCached test;
 
 	@Test
 	public void test() {

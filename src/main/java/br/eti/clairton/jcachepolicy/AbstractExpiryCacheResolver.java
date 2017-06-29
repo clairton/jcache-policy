@@ -1,6 +1,5 @@
 package br.eti.clairton.jcachepolicy;
 
-import static javax.cache.Caching.getCachingProvider;
 import static javax.cache.expiry.AccessedExpiryPolicy.factoryOf;
 
 import java.lang.annotation.Annotation;
@@ -12,15 +11,13 @@ import javax.cache.annotation.CacheInvocationContext;
 import javax.cache.annotation.CacheResolver;
 import javax.cache.configuration.MutableConfiguration;
 import javax.cache.expiry.Duration;
-import javax.cache.spi.CachingProvider;
 
 public abstract class AbstractExpiryCacheResolver implements CacheResolver{
 
 	protected final CacheManager manager;
 
-	public AbstractExpiryCacheResolver() {
-		final CachingProvider provider = getCachingProvider();
-		manager = provider.getCacheManager(provider.getDefaultURI(), provider.getDefaultClassLoader());
+	public AbstractExpiryCacheResolver(final CacheManager manager) {
+		this.manager = manager;
 	}
 
 	@Override
@@ -29,12 +26,12 @@ public abstract class AbstractExpiryCacheResolver implements CacheResolver{
 		return getOrCreateCache(name);
 	}
 
-	private synchronized <K, V> Cache<K, V> getOrCreateCache(String name) {
-		Cache<K, V> cache = manager.getCache(name);
+	private synchronized <K, V> Cache<K, V> getOrCreateCache(final String name) {
+		final Cache<K, V> cache = manager.getCache(name);
 		if (cache == null) {
 			final MutableConfiguration<K, V> configuration = new MutableConfiguration<K, V>();
 			configuration.setExpiryPolicyFactory(factoryOf(new Duration(getTimeUnit(), getQuantity())));
-			cache = manager.createCache(name, configuration);
+			return manager.createCache(name, configuration);
 		}
 		return cache;
 	}
