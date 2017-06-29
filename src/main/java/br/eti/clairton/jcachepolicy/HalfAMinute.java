@@ -4,7 +4,7 @@ import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 
 @ApplicationScoped
-public class HalfAMinute extends AbstractExpiryCacheResolverFactory {
+public class HalfAMinute extends ExpiryCacheResolverFactory {
 
     @Deprecated
     public HalfAMinute() {
@@ -12,7 +12,7 @@ public class HalfAMinute extends AbstractExpiryCacheResolverFactory {
     }
     
 	@Inject
-	public HalfAMinute(@HalfAMinuteExpiry final AbstractExpiryCacheResolver resolver) {
+	public HalfAMinute(@HalfAMinuteExpiry final ExpiryCacheResolver resolver) {
 		super(resolver);
 	}
 }

@@ -8,7 +8,7 @@ import javax.cache.CacheManager;
 import javax.inject.Inject;
 
 @DailyExpiry
-public class DailyExpiryCacheResolver extends AbstractExpiryCacheResolver  {
+public class DailyExpiryCacheResolver extends ExpiryCacheResolver  {
 
     @Deprecated
     public DailyExpiryCacheResolver() {

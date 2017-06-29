@@ -8,7 +8,7 @@ import javax.cache.CacheManager;
 import javax.inject.Inject;
 
 @HourlyExpiry
-public class HourlyExpiryCacheResolver  extends AbstractExpiryCacheResolver  {
+public class HourlyExpiryCacheResolver  extends ExpiryCacheResolver  {
 
     @Deprecated
     public HourlyExpiryCacheResolver() {

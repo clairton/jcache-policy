@@ -4,7 +4,7 @@ import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 
 @ApplicationScoped
-public class Daily extends AbstractExpiryCacheResolverFactory{
+public class Daily extends ExpiryCacheResolverFactory{
     
     @Deprecated
     public Daily() {
@@ -12,7 +12,7 @@ public class Daily extends AbstractExpiryCacheResolverFactory{
     }
 	
 	@Inject
-	public Daily(@DailyExpiry final AbstractExpiryCacheResolver resolver) {
+	public Daily(@DailyExpiry final ExpiryCacheResolver resolver) {
 		super(resolver);
 	}
 }

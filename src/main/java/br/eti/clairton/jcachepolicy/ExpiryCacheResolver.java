@@ -15,11 +15,11 @@ import javax.cache.configuration.MutableConfiguration;
 import javax.cache.expiry.Duration;
 import javax.cache.expiry.ExpiryPolicy;
 
-public abstract class AbstractExpiryCacheResolver implements CacheResolver{
+public abstract class ExpiryCacheResolver implements CacheResolver{
 
 	protected final CacheManager manager;
 
-	public AbstractExpiryCacheResolver(final CacheManager manager) {
+	public ExpiryCacheResolver(final CacheManager manager) {
 		this.manager = manager;
 	}
 

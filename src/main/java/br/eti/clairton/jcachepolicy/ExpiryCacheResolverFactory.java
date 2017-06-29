@@ -7,11 +7,11 @@ import javax.cache.annotation.CacheResolver;
 import javax.cache.annotation.CacheResolverFactory;
 import javax.cache.annotation.CacheResult;
 
-public abstract class AbstractExpiryCacheResolverFactory implements CacheResolverFactory{
+public abstract class ExpiryCacheResolverFactory implements CacheResolverFactory{
 	
-	private final AbstractExpiryCacheResolver resolver;
+	private final ExpiryCacheResolver resolver;
 
-	public AbstractExpiryCacheResolverFactory(final AbstractExpiryCacheResolver resolver) {
+	public ExpiryCacheResolverFactory(final ExpiryCacheResolver resolver) {
 		this.resolver = resolver;
 	}
 
@@ -25,7 +25,7 @@ public abstract class AbstractExpiryCacheResolverFactory implements CacheResolve
 		return resolver;
 	}
 	
-	public AbstractExpiryCacheResolver getResolver() {
+	public ExpiryCacheResolver getResolver() {
 		return resolver;
 	}
 }

@@ -1,16 +1,18 @@
 package br.eti.clairton.jcachepolicy;
 
 import javax.enterprise.context.ApplicationScoped;
+import javax.inject.Inject;
 
 @ApplicationScoped
-public class Hourly extends AbstractExpiryCacheResolverFactory{
+public class Hourly extends ExpiryCacheResolverFactory{
 
     @Deprecated
     public Hourly() {
         this(null);
     }
 
-	public Hourly(@HourlyExpiry final AbstractExpiryCacheResolver resolver) {
+    @Inject
+	public Hourly(@HourlyExpiry final ExpiryCacheResolver resolver) {
 		super(resolver);
 	}
 }
