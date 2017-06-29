@@ -44,11 +44,17 @@
             <scope>provided</scope>
         </dependency>
 		<dependency>
-            <groupId>org.infinispan</groupId>
-            <artifactId>infinispan-jcache</artifactId>
-            <version>8.2.4.Final</version>
-			<scope>provided</scope>
-        </dependency>
+            <groupId>org.jsr107.ri</groupId>
+            <artifactId>cache-ri-impl</artifactId>
+            <version>1.0.0</version>
+            <scope>compile</scope>
+        </dependency>     
+        <dependency>
+            <groupId>org.jsr107.ri</groupId>
+            <artifactId>cache-annotations-ri-cdi</artifactId>
+            <version>1.0.0</version>
+            <scope>compile</scope>
+        </dependency> 
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-core</artifactId>
