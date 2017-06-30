@@ -48,7 +48,7 @@ public abstract class ExpiryCacheResolver implements CacheResolver{
         return manager.createCache(name, configuration);
     }
 
-	private <K, V> Cache<K, V> getCache(final String name) {
+	private synchronized <K, V> Cache<K, V> getCache(final String name) {
 		final Cache<K, V> cache = manager.getCache(name);
 		if (cache == null) {
 			return createCache(name);
